@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform and transition</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <style>
+        .form {
+            background-color: aquamarine;
+            text-align: center;
+            padding: 20px;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .submit {
+            background-color: chartreuse;
+            border: 0ch;
+            padding: 15px 30px 15px 30px;
+        }
+
+        body {
+            margin: 0;
+            /* display: flex; */
+            /* justify-content: center; */
+        }
+
+        .shelf {
+            border: 2px dashed #dadada;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 50px;
+            width: 600px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .shelf .box {
+            width: 33%;
+            height: 100px;
+            background-color: lightseagreen;
+            border-radius: 5px;
+            margin: 3px;
+            transition: transform 1.5s ease;
+        }
+
+        .shelf .box:active {
+            transform: scaleX(1.5);
+            background: lightcoral;
+        }
+
+        .shelf .box:active:nth-child(0),
+        .shelf .box:active:nth-child(1) {
+            transform: scaleX(.75);
+            background: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="" class="form">
+        <h1>Employee Interests Survey form</h1>
+
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="departemant">Enter your departemant:</label>
+        <input type="text" id="departemant" name="departemant"><br>
+
+        <label for="title">Tell us a title about yourself:</label>
+        <textarea type="text" id="title" name="title"></textarea> <br>
+
+        <label>Do you exercise at home? </label>
+        <input type="radio" id="yes" name="exercise" value="Yes">
+        <label for="html">Yes</label>
+        <input type="radio" id="no" name="exercise" value="No">
+        <label for="css">No</label><br>
+
+        <label>How do you like a read about <b>your favurate tupic</b> ?</label><br>
+        <input type="checkbox" id="books" name="books" value="Books">
+        <label for="books">Books</label>
+        <input type="checkbox" id="onlineresources" name="onlineresources" value="Online resources">
+        <label for="onlineresources">Online resources</label>
+        <input type="checkbox" id="phoneapp" name="phoneapp" value="Phone app">
+        <label for="phoneapp">Phone app</label>
+        <input type="checkbox" id="magazine" name="magazine" value="Magazine">
+        <label for="magazine">Magazine</label><br>
+
+        <label for="gener">What gener of movies do you like?</label>
+        <select id="gener" name="gener">
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="horor">Horor</option>
+        </select><br>
+
+        <input type="submit" class="submit" value="Submit">
+    </form>
+
+    <center>
+        <div class="shelf">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </c     enter>
+</body>
+
+</html>
