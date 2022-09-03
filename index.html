@@ -44,24 +44,26 @@
         }
 
         .shelf .box {
-            width: 33%;
+            /* width: 33%; */
             height: 100px;
             background-color: lightseagreen;
             border-radius: 5px;
             margin: 3px;
-            transition: transform 1.5s ease;
+            transition: flex-grow 1s ease;
+            flex-grow: 1;
         }
 
         .shelf .box:active {
-            transform: scaleX(1.5);
+            flex-grow: 2;
+            /* transform: scaleX(1.5); */
             background: lightcoral;
         }
 
-        .shelf .box:active:nth-child(0),
-        .shelf .box:active:nth-child(1) {
-            transform: scaleX(.75);
-            background: lightseagreen;
-        }
+        /* .shelf .box:active:nth-child(0), */
+        /* .shelf .box:active:nth-child(1) { */
+            /* transform: scaleX(.75); */
+            /* background: lightseagreen; */
+        /* } */
     </style>
 </head>
 
@@ -111,7 +113,7 @@
             <div class="box"></div>
             <div class="box"></div>
         </div>
-    </c     enter>
+    </center>
 </body>
 
 </html>
